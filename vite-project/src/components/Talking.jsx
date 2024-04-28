@@ -11,7 +11,7 @@ const Talking = () => {
           alt=""
           className="rounded-md md:size-2/4 md:order-2"
         />
-        <div className="px-6">
+        <div className="md:px-6">
           <h2 className="text-xl font-bold py-2">NEW UPDATE</h2>
           <p>
             Sentez votre souffle, calme et régulier, ancrant votre esprit dans
@@ -26,7 +26,7 @@ const Talking = () => {
           alt=""
           className=" rounded-md  md:size-2/4"
         />
-        <div className="px-6 ">
+        <div className="md:px-6">
           <h2 className="text-xl font-bold py-2">Disposible Test</h2>
           <p>
             Imaginez-vous enveloppé dans une lumière douce et apaisante,
@@ -41,7 +41,7 @@ const Talking = () => {
           alt=""
           className="rounded-md  md:size-2/4 md:order-2"
         />
-        <div className="px-6">
+        <div className="md:px-6">
           <h2 className="text-xl font-bold py-2">A new Area</h2>
           <p>
             Visualisez un jardin intérieur luxuriant, où chaque fleur représente
