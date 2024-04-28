@@ -5,7 +5,7 @@ import Talking from "./components/Talking";
 function App() {
   return (
     <>
-      <div>
+      <div className="h-screen">
         <Nav />
         <HeroBanner />
         <Talking />
