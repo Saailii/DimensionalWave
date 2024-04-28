@@ -1,7 +1,15 @@
+import HeroBanner from "./components/HeroBanner";
+import Nav from "./components/Nav";
+import Talking from "./components/Talking";
+
 function App() {
   return (
     <>
-      <div className="bg-slate-800">TEST</div>
+      <div>
+        <Nav />
+        <HeroBanner />
+        <Talking />
+      </div>
     </>
   );
 }
