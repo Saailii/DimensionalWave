@@ -1,6 +1,8 @@
 import { useState } from "react";
 import HamburgerMenu from "../assets/HamburgerMenu.svg";
 import Logo from "../assets/Logo.jpg";
+import { Link } from "react-router-dom";
+import NewPage from "../pages/newPage";
 
 const Nav = () => {
   const [isHidden, setIsHidden] = useState(true);
@@ -29,16 +31,20 @@ const Nav = () => {
           src={HamburgerMenu}
           alt=""
           onClick={handleClick}
-          className="h-12 absolute top-2 left-0"
+          className="size-8 absolute top-4 left-0"
         />
-        <img src={Logo} alt="" className="size-16 " />
+        <Link to={"/"} className="order-2">
+          <img src={Logo} alt="" className="size-16 " />
+        </Link>
         <ul
-          className={`bg-neutral-100 absolute top-0 left-0 h-48 w-full  mt-16 flex flex-col justify-center items-start gap-2 px-4 ${
+          className={`bg-neutral-50 absolute top-0 left-0 h-48 w-full  mt-16 flex flex-col justify-center items-start gap-2 px-4 shadow-md  ${
             isHidden ? "hidden" : " "
           }`}
         >
-          <li className="text-lg">Accueil</li>
-          <li className="text-lg ">Tarif</li>
+          <Link to={"/NewPage"} className="cursor-pointer text-lg">
+            <li className="text-lg ">New Page</li>
+          </Link>
+
           <li className="text-lg ">Menu</li>
           <li className="text-lg ">Contact</li>
         </ul>
@@ -48,12 +54,15 @@ const Nav = () => {
           scrolledFromY ? " shadow-md" : " "
         }`}
       >
-        <ul className="flex w-full bg-white justify-center items-center gap-12 px-12 ">
-          <img src={Logo} alt="" className="size-16 order-3" />
-          <li className="text-2xl font-semibold font-sans order-1 ">Accueil</li>
-          <li className="text-2xl font-semibold font-sans order-2 ">Menu</li>
-          <li className="text-2xl font-semibold font-sans order-4">Tarifs</li>
-          <li className="text-2xl font-semibold font-sans order-5">Contact</li>
+        <ul className="flex w-full bg-white justify-center  items-center space  gap-60  gap-12 ">
+          <Link to={"/"} className="order-2">
+            <img src={Logo} alt="" className="size-16 " />
+          </Link>
+          <Link to={"/NewPage"} className="cursor-pointer order-1">
+            <li className="text-xl font-semibold font-sans ">New Page</li>
+          </Link>
+
+          <li className="text-xl font-semibold font-sans order-3">Tarifs</li>
         </ul>
       </nav>
     </div>
