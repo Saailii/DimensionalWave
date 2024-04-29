@@ -2,7 +2,7 @@ import { useState } from "react";
 import HamburgerMenu from "../assets/HamburgerMenu.svg";
 import Logo from "../assets/Logo.jpg";
 import { Link } from "react-router-dom";
-import NewPage from "../pages/newPage";
+import NewPage from "../pages/Products";
 
 const Nav = () => {
   const [isHidden, setIsHidden] = useState(true);
@@ -42,7 +42,7 @@ const Nav = () => {
           }`}
         >
           <Link to={"/NewPage"} className="cursor-pointer text-lg ">
-            <li className="text-md    ">New Page</li>
+            <li className="text-md    ">Products</li>
           </Link>
 
           <li className="text-md ">Menu</li>
@@ -59,7 +59,7 @@ const Nav = () => {
             <img src={Logo} alt="" className="size-16   " />
           </Link>
           <Link to={"/NewPage"} className="cursor-pointer order-1 ">
-            <li className="text-md font-semibold font-sans ">New Page</li>
+            <li className="text-md font-semibold font-sans ">Products</li>
           </Link>
 
           <li className="text-md font-semibold font-sans order-3">Tarifs</li>
