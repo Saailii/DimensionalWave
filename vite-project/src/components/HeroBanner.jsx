@@ -14,7 +14,7 @@ const HeroBanner = () => {
       <img
         src={arrowDown}
         alt=""
-        className="absolute top-3/4     left-2/4 animate-bounce md:hidden "
+        className="absolute left-1/2 transform -translate-x-1/2 animate-bounce md:hidden bottom-16  "
       />
     </div>
   );

@@ -25,16 +25,16 @@ const SingleProduct = () => {
       </button>
       <div
         key={product._id}
-        className="h-screen w-full flex flex-col  justify-center items-center  py-16 "
+        className="w-full flex flex-col  justify-center items-center  py-20  "
       >
-        <h1 className="text-xl font-bold uppercase">{product.name}</h1>
+        <h1 className="text-xl font-bold uppercase py-6">T-shirt simple</h1>
         <img
           src={`http://77.37.122.120:3001/${product.imageUrl[0]}`}
           alt=""
-          className="size-3/4 order-1 rounded-md "
+          className="h-full w-full order-1 rounded-md  "
         />
         <div className="order-2 flex justify-center items-center flex-col">
-          <p className="text-xl font-bold py-2">{product.price}€</p>
+          <p className="text-xl font-bold py-4">{product.price}€</p>
           <p className="text-sm font-semibold px-10 py-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequuntur corporis maiores perspiciatis tenetur perferendis rem

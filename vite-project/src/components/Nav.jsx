@@ -35,7 +35,7 @@ const Nav = () => {
           src={HamburgerMenu}
           alt=""
           onClick={handleClickNav}
-          className="size-8 absolute top-4 left-0"
+          className="size-8 absolute top-4 left-2"
         />
         <Link to={"/"} className="order-1">
           <img src={Logo} alt="" className="size-16 order-1 " />
@@ -55,9 +55,9 @@ const Nav = () => {
         <img
           src={userLogo}
           alt=""
-          className=" absolute top-4 right-2 size-8 "
+          className=" absolute top-4 right-3 size-8 "
         />
-        <div className="absolute top-16 bg-red-500 w-full h-28">
+        <div className="absolute top-16 bg-red-500 w-full h-28 hidden">
           <div>Se connecter</div>
           <div>S'enrengistrer</div>
         </div>
