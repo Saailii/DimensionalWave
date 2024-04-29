@@ -20,11 +20,11 @@ const Products = () => {
   }, []); // Add empty dependency array to run effect only once
 
   return (
-    <div className="h-screen w-full grid grid-cols-2 py-16    ">
+    <div className="h-screen w-full grid grid-cols-2 py-16">
       {products.map((product) => (
         <div
           key={product._id}
-          className="flex flex-col justify-center items-start w-full px-2 "
+          className="flex flex-col justify-center items-start  px-2   "
         >
           <Link
             to={`/${product._id}`}

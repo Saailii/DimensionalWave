@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 const SingleProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState("");
-  const [imagePreview, setImagePreview] = useState(0)
+  const [imagePreview, setImagePreview] = useState(0);
 
   useEffect(() => {
     fetch(`http://77.37.122.120:3001/product/${id}`, {
@@ -30,31 +30,34 @@ const SingleProduct = () => {
         className="w-full flex flex-col  justify-center items-center  py-20  "
       >
         <h1 className="text-xl font-bold uppercase py-6">T-shirt simple</h1>
+        <p className="text-xl font-bold py-4">{product.price}€</p>
         <img
           src={`http://77.37.122.120:3001/${product.imageUrl[imagePreview]}`}
           alt=""
-          className="h-full w-full order-1   "
+          className="h-full w-full order-1 md:size-3/4  "
         />
-      
-      <div className="order-2 flex justify-center items-center flex-col">
-        <div className="flex w-full">
-          {product.imageUrl.map((image, index) => (
-            
-              <img key={image} src={`http://77.37.122.120:3001/${image}`} alt="" className="w-2/6 p-3" onMouseEnter={() => {
-                setImagePreview(index)
-              }} />
-            
-            
-          ))}
+
+        <div className="order-2 flex justify-center items-center flex-col">
+          <div className="flex w-full">
+            {product.imageUrl.map((image, index) => (
+              <img
+                key={image}
+                src={`http://77.37.122.120:3001/${image}`}
+                alt=""
+                className="w-2/6 p-3 md:h-3/6"
+                onMouseEnter={() => {
+                  setImagePreview(index);
+                }}
+              />
+            ))}
           </div>
-          <p className="text-xl font-bold py-4">{product.price}€</p>
+
           <p className="text-sm font-semibold px-10 py-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequuntur corporis maiores perspiciatis tenetur perferendis rem
             beatae suscipit tempore fugiat dicta dignissimos cumque.
           </p>
         </div>
-
       </div>
     </div>
   );
