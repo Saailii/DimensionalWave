@@ -20,7 +20,7 @@ const SingleProduct = () => {
   return (
     <div>
       <Nav />
-      <button className="bg-neutral-950 text-neutral-50 w-full   fixed top-full transform -translate-y-full h-20 ">
+      <button className="bg-neutral-950 text-neutral-50 w-full hover:bg-neutral-700 transition-colors  fixed top-full transform -translate-y-full h-20 ">
         Add to cart
       </button>
       <div
@@ -35,7 +35,7 @@ const SingleProduct = () => {
         />
         <div className="order-2 flex justify-center items-center flex-col">
           <p className="text-xl font-bold py-2">{product.price}€</p>
-          <p className="text-md font-semibold px-8">
+          <p className="text-sm font-semibold px-10 py-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequuntur corporis maiores perspiciatis tenetur perferendis rem
             beatae suscipit tempore fugiat dicta dignissimos cumque.

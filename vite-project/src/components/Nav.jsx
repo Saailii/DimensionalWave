@@ -2,11 +2,12 @@ import { useState } from "react";
 import HamburgerMenu from "../assets/HamburgerMenu.svg";
 import Logo from "../assets/Logo.jpg";
 import { Link } from "react-router-dom";
-import NewPage from "../pages/Products";
+import userLogo from "../assets/user-stroke-rounded.svg";
 
 const Nav = () => {
-  const [isHidden, setIsHidden] = useState(true);
+  const [isHiddenNav, setIsHiddenNav] = useState(true);
   const [scrolledFromY, setScrolledFromY] = useState(false);
+  const [isHiddenLogin, setIsHiddenLogin] = useState(false);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
@@ -16,29 +17,32 @@ const Nav = () => {
     }
   });
 
-  const handleClick = () => {
-    setIsHidden(!isHidden);
+  const handleClickNav = () => {
+    setIsHiddenNav(!isHiddenNav);
   };
 
+  const handleClickLogin = () => {
+    setIsHiddenLogin(!isHiddenLogin);
+  };
   return (
     <div>
       <nav
-        className={`flex flex-col  justify-center items-center fixed  bg-white w-full h-16 transition-shadow z-10 md:hidden ${
+        className={`flex   justify-center items-center fixed  bg-white w-full h-16 transition-shadow z-10 md:hidden ${
           scrolledFromY ? "shadow-md " : " "
         } `}
       >
         <img
           src={HamburgerMenu}
           alt=""
-          onClick={handleClick}
+          onClick={handleClickNav}
           className="size-8 absolute top-4 left-0"
         />
-        <Link to={"/"} className="order-2">
-          <img src={Logo} alt="" className="size-16 " />
+        <Link to={"/"} className="order-1">
+          <img src={Logo} alt="" className="size-16 order-1 " />
         </Link>
         <ul
           className={`bg-white absolute top-0 left-0 h-48 w-full  mt-16 flex flex-col justify-center items-start gap-2 px-4 shadow-md  ${
-            isHidden ? "hidden" : " "
+            isHiddenNav ? "hidden" : " "
           }`}
         >
           <Link to={"/NewPage"} className="cursor-pointer text-lg ">
@@ -48,6 +52,15 @@ const Nav = () => {
           <li className="text-md ">Menu</li>
           <li className="text-md">Contact</li>
         </ul>
+        <img
+          src={userLogo}
+          alt=""
+          className=" absolute top-4 right-2 size-8 "
+        />
+        <div className="absolute top-16 bg-red-500 w-full h-28">
+          <div>Se connecter</div>
+          <div>S'enrengistrer</div>
+        </div>
       </nav>
       <nav
         className={`flex fixed w-full h-16 max-md:hidden transition-shadow z-10 ${
