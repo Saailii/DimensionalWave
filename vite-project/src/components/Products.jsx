@@ -20,26 +20,26 @@ const Products = () => {
   }, []); // Add empty dependency array to run effect only once
 
   return (
-    <div className="h-screen w-full flex justify-center items-center">
+    <div className="h-screen w-full grid grid-cols-2 py-16    ">
       {products.map((product) => (
         <div
           key={product._id}
-          className="flex flex-col justify-center items-center w-full"
+          className="flex flex-col justify-center items-start w-full px-2 "
         >
           <Link
             to={`/${product._id}`}
-            className=" flex justify-center items-center "
+            className=" flex justify-start items-start "
           >
             <img
               src={`http://77.37.122.120:3001/${product.imageUrl[0]}`}
               alt=""
-              className="size-3/5 relative rounded-md"
+              className="w-full  relative rounded-md "
             />
           </Link>
-          <h1 className="uppercase font-mono font-semibold">
+          <h1 className="uppercase font-sans text-md">
             T-Shirt Rose Matière bien
           </h1>
-          <h2 className="font-semibold font-mono">{product.price}€</h2>
+          <h2 className="  font-mono">{product.price}€</h2>
         </div>
       ))}
     </div>
