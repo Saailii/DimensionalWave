@@ -41,8 +41,8 @@ const Nav = () => {
             isHidden ? "hidden" : " "
           }`}
         >
-          <Link to={"/NewPage"} className="cursor-pointer text-lg">
-            <li className="text-md ">New Page</li>
+          <Link to={"/NewPage"} className="cursor-pointer text-lg ">
+            <li className="text-md    ">New Page</li>
           </Link>
 
           <li className="text-md ">Menu</li>
@@ -54,11 +54,11 @@ const Nav = () => {
           scrolledFromY ? " shadow-md" : " "
         }`}
       >
-        <ul className="flex w-full bg-white justify-center  items-center space  gap-60  gap-12 ">
-          <Link to={"/"} className="order-2">
-            <img src={Logo} alt="" className="size-16 " />
+        <ul className="flex w-full bg-white justify-center  items-center space  gap-60  ">
+          <Link to={"/"} className="order-2 ">
+            <img src={Logo} alt="" className="size-16   " />
           </Link>
-          <Link to={"/NewPage"} className="cursor-pointer order-1">
+          <Link to={"/NewPage"} className="cursor-pointer order-1 ">
             <li className="text-md font-semibold font-sans ">New Page</li>
           </Link>
 

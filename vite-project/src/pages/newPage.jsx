@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import superHero from "../assets/bg-hero-banner-02.jpg";
+import Products from "../components/Products";
 
 const NewPage = () => {
   return (
@@ -9,11 +10,7 @@ const NewPage = () => {
         <img src={superHero} alt="" className="w-full" />
       </div>
       <div className="max-md:absolute max-md:top-2/4 max-md:px-6">
-        <h1 className="text-4xl">Titre SA</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus,
-          esse voluptas. Obcaecati hic dolorum quo.
-        </p>
+        <Products />
       </div>
     </div>
   );
