@@ -22,22 +22,22 @@ const SingleProduct = () => {
   return (
     <div>
       <Nav />
-      <button className="bg-neutral-950 text-neutral-50 w-full hover:bg-neutral-700 transition-colors  fixed top-full transform -translate-y-full h-20 ">
+      <button className="fixed top-full h-20 w-full -translate-y-full  bg-neutral-950 text-neutral-50 transition-colors hover:bg-neutral-700">
         Add to cart
       </button>
       <div
         key={product._id}
-        className="w-full flex flex-col  justify-center items-center  py-20  "
+        className="flex w-full flex-col  items-center justify-center  py-20  "
       >
-        <h1 className="text-xl font-bold uppercase py-6">T-shirt simple</h1>
-        <p className="text-xl font-bold py-4">{product.price}€</p>
+        <h1 className="py-6 text-xl font-bold uppercase">T-shirt simple</h1>
+        <p className="py-4 text-xl font-bold">{product.price}€</p>
         <img
           src={`http://77.37.122.120:3001/${product.imageUrl[imagePreview]}`}
           alt=""
-          className="h-full w-full order-1 md:size-3/4  "
+          className="order-1 size-full md:size-3/4  "
         />
 
-        <div className="order-2 flex justify-center items-center flex-col">
+        <div className="order-2 flex flex-col items-center justify-center">
           <div className="flex w-full">
             {product.imageUrl.map((image, index) => (
               <img
@@ -52,7 +52,7 @@ const SingleProduct = () => {
             ))}
           </div>
 
-          <p className="text-sm font-semibold px-10 py-8">
+          <p className="px-10 py-8 text-sm font-semibold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequuntur corporis maiores perspiciatis tenetur perferendis rem
             beatae suscipit tempore fugiat dicta dignissimos cumque.

@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import HamburgerMenu from "../assets/HamburgerMenu.svg";
 import Logo from "../assets/Logo.jpg";
-import { Link } from "react-router-dom";
 import userLogo from "../assets/user-stroke-rounded.svg";
 
 const Nav = () => {
@@ -27,7 +27,7 @@ const Nav = () => {
   return (
     <div>
       <nav
-        className={`flex   justify-center items-center fixed  bg-white w-full h-16 transition-shadow z-10 md:hidden ${
+        className={`fixed   z-10 flex h-16  w-full items-center justify-center bg-white transition-shadow md:hidden ${
           scrolledFromY ? "shadow-md " : " "
         } `}
       >
@@ -35,47 +35,47 @@ const Nav = () => {
           src={HamburgerMenu}
           alt=""
           onClick={handleClickNav}
-          className="size-8 absolute top-4 left-2"
+          className="absolute left-2 top-4 size-8"
         />
         <Link to={"/"} className="order-1">
-          <img src={Logo} alt="" className="size-16 order-1 " />
+          <img src={Logo} alt="" className="order-1 size-16 " />
         </Link>
         <ul
-          className={`bg-white absolute top-0 left-0 h-48 w-full  mt-16 flex flex-col justify-center items-start gap-2 px-4 shadow-md  ${
+          className={`absolute left-0 top-0 mt-16 flex h-48  w-full flex-col items-start justify-center gap-2 bg-white px-4 shadow-md  ${
             isHiddenNav ? "hidden" : " "
           }`}
         >
           <Link to={"/NewPage"} className="cursor-pointer text-lg ">
-            <li className="text-md    ">Products</li>
+            <li className="text-xl       ">Products</li>
           </Link>
 
-          <li className="text-md ">Menu</li>
-          <li className="text-md">Contact</li>
+          <li className="text-xl ">Menu</li>
+          <li className="text-xl">Contact</li>
         </ul>
         <img
           src={userLogo}
           alt=""
-          className=" absolute top-4 right-3 size-8 "
+          className=" absolute right-3 top-4 size-8 "
         />
-        <div className="absolute top-16 bg-red-500 w-full h-28 hidden">
+        <div className="absolute top-16 hidden h-28 w-full bg-red-500">
           <div>Se connecter</div>
           <div>S'enrengistrer</div>
         </div>
       </nav>
       <nav
-        className={`flex fixed w-full h-16 max-md:hidden transition-shadow z-10 ${
+        className={`fixed z-10 flex h-16 w-full transition-shadow max-md:hidden ${
           scrolledFromY ? " shadow-md" : " "
         }`}
       >
-        <ul className="flex w-full bg-white justify-center  items-center space  gap-60  ">
+        <ul className=" flex w-full items-center  justify-center gap-60  bg-white  ">
           <Link to={"/"} className="order-2 ">
             <img src={Logo} alt="" className="size-16   " />
           </Link>
-          <Link to={"/NewPage"} className="cursor-pointer order-1 ">
-            <li className="text-md font-semibold font-sans ">Products</li>
+          <Link to={"/NewPage"} className="order-1 cursor-pointer ">
+            <li className="font-sans text-xl font-semibold ">Products</li>
           </Link>
 
-          <li className="text-md font-semibold font-sans order-3">Tarifs</li>
+          <li className="order-3 font-sans text-xl font-semibold">Tarifs</li>
         </ul>
       </nav>
     </div>
