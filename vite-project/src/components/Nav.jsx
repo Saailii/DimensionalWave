@@ -46,11 +46,12 @@ const Nav = () => {
           }`}
         >
           <Link to={"/NewPage"} className="cursor-pointer text-lg ">
-            <li className="text-xl       ">Products</li>
+            <li className="text-xl       ">Intemporel</li>
           </Link>
 
-          <li className="text-xl ">Menu</li>
-          <li className="text-xl">Contact</li>
+          <li className="text-xl">Drop</li>
+          <li className="text-xl ">Contact</li>
+          
         </ul>
         <img
           src={userLogo}
@@ -67,7 +68,7 @@ const Nav = () => {
           scrolledFromY ? " shadow-md" : " "
         }`}
       >
-        <ul className=" flex w-full items-center  justify-center gap-60  bg-white  ">
+        <ul className=" flex w-full items-center  justify-between px-6  bg-white  ">
           <Link to={"/"} className="order-2 ">
             <img src={Logo} alt="" className="size-16   " />
           </Link>

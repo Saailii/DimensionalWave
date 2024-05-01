@@ -20,7 +20,7 @@ const Products = () => {
   }, []); // Add empty dependency array to run effect only once
 
   return (
-    <div className="grid h-screen w-full grid-cols-1 py-16 sm:grid-cols-2 md:grid-cols-3 ">
+    <div className="grid h-screen w-full grid-cols-2 py-16 sm:grid-cols-2 md:grid-cols-3 ">
       {products.map((product) => (
         <div
           key={product._id}
